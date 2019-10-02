@@ -1,0 +1,485 @@
+html { 
+	font-family: "Times New Roman";
+	min-width: 320px;
+}
+
+/*Headers and text formatting
+------------------------------------------------------
+
+
+
+------------------------------------------------------*/
+
+h1 {
+	color: white;
+	text-align: center;
+	font-size: 50px;
+	text-shadow: 1px 1px rgba(0,0,0,0.8);
+}
+
+h2 {
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	text-shadow: 1px 1px rgba(0,0,0,0.8);
+}
+
+h3 {
+	color: black;
+}
+
+p {
+	font-size: 20px;
+	color: black;
+	text-align: justify;
+}
+
+/*Layout and body
+------------------------------------------------------
+
+
+
+------------------------------------------------------*/
+
+body {
+	background-color: lightgrey;
+	margin: 0;
+}
+
+header {
+	box-shadow: 0 18px 26px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19);
+	position: relative;
+}
+
+.main {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+}
+
+.main img {
+	width: 100%;
+	display: block;
+}
+
+section {
+	margin-top: 5%;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 100%;
+}
+
+/*Navigation menu
+------------------------------------------------------
+This version is only visible in large versions of the
+website. A drop down menu is implemented in a 
+different section for mobile use.
+
+------------------------------------------------------*/
+
+.navi {
+	position: fixed;
+	width: 15%;
+	min-width: 149px;
+	margin: 0;
+}
+
+.navi button {
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	display: block;
+	cursor: pointer;
+	box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+	outline: none;
+	color: #000;
+	background-color: #ffffff;
+	border: none;
+	font-size: 16px;
+	font-family: "Times New Roman";
+	width: 100px;
+}
+
+.navi button:active {
+	transform: translateY(4px);
+	box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*Project boxes and contents
+------------------------------------------------------
+Font-size set to 0 to remove space breaks between 
+items within the sizeModifier, to allow everything 
+to fit inline evenly. SizeModifier contains classes: 
+imageButtons, projectImages, projectButtons. 
+Font-size needs to be re-set to a different value 
+where needed.
+------------------------------------------------------*/
+
+.project {
+	margin-top: 5%;
+	box-shadow: 0 18px 26px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19);
+	padding: 2%;
+	background-color: white;
+}
+
+.title{
+	width: 70%;
+	margin: 0;
+	font-size: 24px;
+}
+
+.date {
+	width: 30%;
+	text-align: right;
+	float: right;
+	margin: 0;
+	font-size: 20px;
+}
+.title, .date {
+	display: inline-table;
+}
+
+.sizeModifier {
+	width: 100%;
+	min-width: 300px;
+	font-size: 0;
+}
+
+.projectImages {
+	width: 50%;
+	left: 0%;
+	margin: 0;
+}
+
+.projectImages img {
+	width: 31%;
+	margin: 1%;
+	vertical-align: middle;
+	/*transition: 0.4s;*/
+}
+
+.projectImages img:hover {
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.projectButtons {
+	width: 40%;
+	margin: 0;
+}
+
+.projectButtons a {
+	display: table-cell;
+	text-align: center;
+	width: 30%;
+	margin-left: 10%;
+	margin-right: 10%;
+	font-size: 19px;
+	cursor: pointer;
+	color: navy;
+	text-decoration: underline;
+
+}
+
+.projectButtons2 {
+	width: 100%;
+	margin: 0;
+}
+
+.projectButtons2 a {
+	margin-left: 0;
+	margin-right: auto;
+	font-size: 19px;
+	cursor: pointer;
+	color: navy;
+	text-decoration: underline;
+
+}
+
+.imageButtons {
+	width: 5%;
+	margin: 0;
+}
+
+.imageButtons button{
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	font-size: 30px;
+	width: 100%;
+}
+
+.imageButtons button:focus {
+	outline: 0;
+}
+
+.projectImages, .projectButtons, .imageButtons {
+	display: inline-table;
+	vertical-align: middle;
+	
+}
+
+/*Image enlargement
+------------------------------------------------------
+
+
+
+------------------------------------------------------*/
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	padding-top: 100px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(46, 46, 46); 
+	background-color: rgba(0,0,0,0.9);
+}
+
+.largeImage {
+	margin: auto;
+	display: block;
+	max-height: 750px;
+	max-width: 800px;
+}
+
+.caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 600px;
+	text-align: center;
+	font-size: 18px;
+	color: lightgrey;
+	padding: 10px 0;
+	height: 150px;
+	z-index: 1;
+}
+
+.largeImage, .caption {
+	animation-name: zoom;
+	animation-duration: 0.3s;
+}
+
+@keyframes zoom {
+	from {transform:scale(0)}
+	to {transform:scale(1)}
+}
+
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: lightgrey;
+	font-size: 50px;
+	font-weight: bold;
+	transition: 0.4s;
+}
+  
+.close:hover,
+.close:focus {
+	color: rgb(150, 150, 150);
+	cursor: pointer;
+}
+
+/*PDF embed
+------------------------------------------------------
+
+
+
+------------------------------------------------------*/
+.modal2 {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	padding-top: 100px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(46, 46, 46); 
+	background-color: rgba(0,0,0,0.9);
+}
+
+iframe {
+	display: block;
+	z-index: 1;
+	left: 10%;
+	top: 5%;
+	position: fixed;
+}
+
+/*GitHub and LinkedIn buttons
+------------------------------------------------------
+
+
+
+------------------------------------------------------*/
+
+.specButtons {
+	font-size: 0;
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 2px;
+	padding-left: 0;
+}
+
+.specButtons a img {
+	margin-left: 2px;
+	max-height: 30px;
+}
+
+/*Mobile and small device compatibility
+------------------------------------------------------
+Each device size needs its own set of adjustements
+to ensure good scaling.
+
+------------------------------------------------------*/
+/* Small devices */
+@media only screen and (max-width: 699px){
+
+	.specButtons {
+		display: block;
+	}
+
+	header {
+		max-height: 100%;
+	}
+
+	h1 {
+		font-size: 35px;
+	}
+	
+	h2 {
+		font-size: 25px;
+	}
+
+	p {
+		font-size: 15px;
+	}
+
+	.title {
+		font-size: 20px;
+	}
+
+	.date {
+		font-size: 20px;
+	}
+
+	.projectImages {
+		width: 80%;
+	}
+
+	.imageButtons {
+		width: 10%;
+		font-size: 20px;
+	}
+
+	.projectButtons {
+		width: 100%
+	}
+
+	.projectButtons a {
+		font-size: 20px;
+	}
+	
+	.projectButtons2 a {
+		font-size: 20px;
+		text-align: left;
+	}
+	.projectImages, .imageButtons {
+		display: inline-table;
+		vertical-align: middle;
+		
+	}
+
+	.main {
+		width: 100%;
+		margin: 0;
+		top: 0;
+	}
+
+	.navi { 
+		display: none;
+	}
+	
+	.largeImage {
+		width: 100%;
+	}
+
+	.caption {
+		font-size: 15px;
+	}
+
+	.close {
+		font-size: 70px;
+		top: 5px;
+		right: 5px;
+	}
+}
+
+/* Tablets */
+@media only screen and (min-width: 700px) and (max-width: 991px) {
+
+	header {
+		max-height: 100%;
+	}
+
+	.navi {
+		min-width: 105px;
+	}
+	
+	.largeImage {
+		width: 100%;
+	}
+
+	.caption {
+		font-size: 30px;
+	}
+
+	.close {
+		font-size: 70px;
+		top: 5px;
+		right: 5px;
+	}
+
+	.projectImages {
+		width: 80%;
+	}
+
+	.imageButtons {
+		width: 10%;
+		font-size: 20px;
+	}
+
+	.projectButtons {
+		width: 100%
+	}
+
+	.projectImages, .imageButtons {
+		display: inline-table;
+		vertical-align: middle;
+		
+	}
+
+}

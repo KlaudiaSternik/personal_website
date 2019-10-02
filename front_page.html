@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-UK" id="top">
+	<head>
+		
+		<title>Klaudia Sternik</title>
+		<link rel="stylesheet" type="text/css" href="CSS/Main.css">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	</head>
+	
+	<body>
+		<div class="navi">
+			<button id="homeButton" type="button">Home</button>
+			<button id="LinkedIn" type="button" href="">LinkedIn</button>
+			<button id="GitHub" type="button" href="">GitHub</button>
+			<button id="p3b" type="button">Dissertation</button>
+			<button id="p2b" type="button">CMS Report</button>
+			<button id="p1b" type="button">Website</button>
+		</div>
+		
+		<div class="main" id="home">
+			<header>
+				<img src="Data/mainimg/11.png" alt="background" />
+					<div class="centered">
+						<h1>Klaudia Sternik</h1>
+						<h2>sternikk95@gmail.com</h2>
+					</div>
+			</header>
+			
+			<section>
+				<div class="project" id="p3">
+					<h3 class="title">Investigating the relative performance of 
+						machine learning algorithms</h3>
+					<h3 class="date">August 2018</h3>
+					<p>The relative performance of machine learning algorithms in
+					particle physics analysis has been studied.
+					Boosted decision trees and support vector machines have been 
+					investigated through the use of simulated LHC data sets. The average 
+					expected performances on unseen data sets have been investigated through 
+					the use of the LLR method, together with hyper parameter optimisation. 
+					The Jackknife method and Jackknife Variance Estimate were used to find the 
+					standard error for the calculated performances. A comparison is presented of 
+					the expected performance of these algorithms in rejecting backgrounds from 
+					top pair production in searches for di-Higgs signals at the ATLAS experiment 
+					at the LHC. After optimising both algorithms, the most important parameters 
+					were found to be gamma and cost for SVMs, and maximum tree depth for BDTs. 
+					When compared together, SVMs were found superior when a small amount of training 
+					data is used, whilst BDTs performed better with more training data. BDTs are more 
+					suitable for high energy physics research due to their performance when using
+					large amounts of training data, and lower training times.</p>
+					
+					<div class="sizeModifier">
+						<div class="imageButtons">
+							<button type="button" onclick="plusDivs(-1, 'images3')">&#10094;</button>
+						</div>
+						<div class="projectImages">
+							<img id="p3i1" class="images3" src="Data/project3/noeventsBDT.png" 
+							alt=" Graphs showing the eﬀects of the number of training events 
+							on the Signiﬁcance of a BDT algorithm." />
+							<img id="p3i2" class="images3" src="Data/project3/noeventsSVM.png" 
+							alt="Graphs showing the eﬀects of the number of training events 
+							on the Signiﬁcance of an SVM algorithm." />
+							<img id="p3i3" class="images3" src="Data/project3/BDThyperparameters.png" 
+							alt="Eﬀects of diﬀerent BDT hyper-parameters on the expected signiﬁcance." />
+							<img id="p3i4" class="images3" src="Data/project3/SVMhyperparameters.png" 
+							alt="Eﬀects of diﬀerent SVM hyper-parameters on the expected signiﬁcance." />
+							<img id="p3i5" class="images3" src="Data/project3/SVMcost.png" 
+							alt="Histograms showing signiﬁcance values across all Jackknife iterations 
+							for diﬀerent Cost values." />
+							<img id="p3i6" class="images3" src="Data/project3/notrainingevents.png" 
+							alt="Histograms showing the eﬀects of the number of training events on 
+							=the Signiﬁcance of an algorithm." />
+							<img id="p3i7" class="images3" src="Data/project3/noeventsBDT.png" 
+							alt=" Graphs showing the eﬀects of the number of training events 
+							on the Signiﬁcance of a BDT algorithm." />
+							<img id="p3i8" class="images3" src="Data/project3/noeventsSVM.png" 
+							alt="Graphs showing the eﬀects of the number of training events 
+							on the Signiﬁcance of an SVM algorithm." />
+
+						</div>
+						<div class="imageButtons">
+							<button type="button" onclick="plusDivs(+1, 'images3')">&#10095;</button>
+						</div>
+						<div class="projectButtons">
+							<a id="Doc3">Documentation</a>
+							<a id="Code3" href="">Source Code</a>
+						</div>
+					
+					</div>
+				
+				</div>
+				
+				<div class="project" id="p2">
+					<h3 class="title">CMS: Compact Muon Solenoid</h3>
+					<h3 class="date">December 2016</h3>
+					<p>The Large Hadron Collider made its debut on September 10, 
+						2008. It is home to multiple different detectors, including 
+						the Compact Muon Solenoid that this report will describe. 
+						The CMS detector is specialised in high energy particle physics 
+						research. The collision debris can be seen through the 
+						interaction of the particles with the carefully chosen layers 
+						of equipment. There are five main sections in the detector 
+						that will be thoroughly described; those being tracker detector, 
+						electromagnetic calorimeter, hadron calorimeter, superconducting 
+						solenoid magnet, iron return yoke, muon detectors.</p>
+
+						<div class="sizeModifier">
+								<div class="projectButtons2">
+									<a id="Doc2">Documentation</a>
+								</div>
+						</div>
+				</div>
+				
+				<div class="project" id="p1">
+					<h3 class="title">Title of project</h3>
+					<h3 class="date">September 2019</h3>
+					<p>Paragraph about project. Short summary.</p>
+
+					<div class="sizeModifier">
+							<div class="imageButtons">
+								<button type="button" onclick="plusDivs(-1, 'images1')">&#10094;</button>
+							</div>
+							<div class="projectImages">
+
+							</div>
+							<div class="imageButtons">
+								<button type="button" onclick="plusDivs(+1, 'images1')">&#10095;</button>
+							</div>
+							<div class="projectButtons">
+								<a id="Doc" >Documentation</a>
+								<a id="Code" href="">Source Code</a>
+							</div>
+						
+						</div>
+
+				</div>
+				
+			</section>
+		</div>
+
+		<div id="modalID" class="modal">
+			<span class="close">&times;</span>
+			<img class="largeImage" id="imageID">
+			<div class="caption" id="captionID"></div>
+		</div>
+
+		<div id="modalID2" class="modal">
+			<iframe id="projectPDF" width=80% height=90%></iframe>
+			<span class="close">&times;</span>
+		</div>
+
+		<div class="specButtons">
+			<a href="">
+				<img src="Data/github/med_blk.png" alt="GitHub"/>
+			</a>
+			<a href="">
+				<img src="Data/linkedin/small.png" alt="LinkedIn"/>
+			</a>
+		</div>
+
+		<script src="JavaScript/Main.js"></script>
+
+	</body>
+</html>
